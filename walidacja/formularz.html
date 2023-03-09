@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <html lang="pl-PL"></html>
+   <link rel="stylesheet" href="formularz.css">
+   <script>
+      function wyswietl(){
+         var imie=document.getElementById("imie").value;
+         var nazwisko=document.getElementById("nazwisko").value;
+         var email = document.getElementById("email").value;
+         var re = /^[A-z0-9]{2,30}@[A-z0-9]{2,30}.[A-z0-9]{2,30}$/;
+         if(imie=="" || nazwisko==""){
+            alert("Imię i naziwsko jest wymagane");
+         }
+         else{
+            alert("dane są prawidłowo wypełnione");
+         }
+         if(!re.test(email))
+            alert("Ten adres jest nieprawidłowy");
+         else
+            alert("Ten adres jest prawidłowy");
+      }
+   </script>
+   </head>
+   <body>
+<center>
+   <div>
+   Twoje dane:<br><br>
+   Imię:
+   <input type="text" name="imie" id="imie"><br>
+   Nazwisko:
+   <input type="text" name="nazwisko" id="nazwisko"><br>
+   Klasa:
+   <input type="text" name="klasa"><br>
+   <FORM NAME="form1">
+   e-mail:
+   <input type="text" name="email" id="email"><br>
+   ocena:
+   <input type="number" name="ocena"><br>   
+   data:<br>
+   <input type="date" name="data"><br>
+   <br>
+   <input type="button" value="sprawdź" onClick="wyswietl()"><br><br>
+   <h6>pole imię i pole nazwisko jest wymagane</h6>
+   </FORM>
+   </div>
+</center>
+   </body>
+</html>
